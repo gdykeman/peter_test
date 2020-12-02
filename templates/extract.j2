@@ -1,0 +1,5 @@
+{% for x in machines.resources %}
+{% if x.metadata.ownerReferences is defined and x.metadata.ownerReferences[0].name ==  extract_value  %}
+{{ x.metadata.name }}
+{% endif %}
+{% endfor %}

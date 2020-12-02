@@ -1,0 +1,17 @@
+---
+- name: Test Extracting Vars
+  hosts: localhost
+  gather_facts: no
+
+  vars:
+    extract_value: ocp46-4p8gf-ocs-0
+
+  tasks:
+    - name: include vars
+      include_vars: dataset.json
+
+    - set_fact:
+        machine_values: "{{ lookup('template', 'extract.j2') }}"
+    
+    - debug:
+        var: "machine_values.split('\n')[0:-1]"

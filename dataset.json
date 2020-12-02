@@ -1,0 +1,1866 @@
+{
+    "machines": {
+        "changed": false,
+        "failed": false,
+        "resources": [
+            {
+                "apiVersion": "machine.openshift.io/v1beta1",
+                "kind": "Machine",
+                "metadata": {
+                    "annotations": {
+                        "VmId": "4e14dacd-5890-4802-8567-98423e0ba958",
+                        "machine.openshift.io/instance-state": "up"
+                    },
+                    "creationTimestamp": "2020-11-30T19:19:45Z",
+                    "finalizers": [
+                        "machine.machine.openshift.io"
+                    ],
+                    "generation": 2,
+                    "labels": {
+                        "machine.openshift.io/cluster-api-cluster": "ocp46-4p8gf",
+                        "machine.openshift.io/cluster-api-machine-role": "master",
+                        "machine.openshift.io/cluster-api-machine-type": "master"
+                    },
+                    "managedFields": [
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "fieldsType": "FieldsV1",
+                            "fieldsV1": {
+                                "f:metadata": {
+                                    "f:labels": {
+                                        ".": {},
+                                        "f:machine.openshift.io/cluster-api-cluster": {},
+                                        "f:machine.openshift.io/cluster-api-machine-role": {},
+                                        "f:machine.openshift.io/cluster-api-machine-type": {}
+                                    }
+                                },
+                                "f:spec": {
+                                    ".": {},
+                                    "f:metadata": {},
+                                    "f:providerSpec": {
+                                        ".": {},
+                                        "f:value": {
+                                            ".": {},
+                                            "f:apiVersion": {},
+                                            "f:cluster_id": {},
+                                            "f:cpu": {},
+                                            "f:credentialsSecret": {},
+                                            "f:id": {},
+                                            "f:kind": {},
+                                            "f:memory_mb": {},
+                                            "f:metadata": {},
+                                            "f:name": {},
+                                            "f:os_disk": {},
+                                            "f:template_name": {},
+                                            "f:type": {},
+                                            "f:userDataSecret": {}
+                                        }
+                                    }
+                                },
+                                "f:status": {}
+                            },
+                            "manager": "cluster-bootstrap",
+                            "operation": "Update",
+                            "time": "2020-11-30T19:19:45Z"
+                        },
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "fieldsType": "FieldsV1",
+                            "fieldsV1": {
+                                "f:status": {
+                                    "f:nodeRef": {
+                                        ".": {},
+                                        "f:kind": {},
+                                        "f:name": {},
+                                        "f:uid": {}
+                                    }
+                                }
+                            },
+                            "manager": "nodelink-controller",
+                            "operation": "Update",
+                            "time": "2020-11-30T19:39:45Z"
+                        },
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "fieldsType": "FieldsV1",
+                            "fieldsV1": {
+                                "f:metadata": {
+                                    "f:annotations": {
+                                        ".": {},
+                                        "f:VmId": {},
+                                        "f:machine.openshift.io/instance-state": {}
+                                    },
+                                    "f:finalizers": {
+                                        ".": {},
+                                        "v:\"machine.machine.openshift.io\"": {}
+                                    }
+                                },
+                                "f:spec": {
+                                    "f:providerID": {}
+                                },
+                                "f:status": {
+                                    "f:addresses": {},
+                                    "f:lastUpdated": {},
+                                    "f:phase": {},
+                                    "f:providerStatus": {
+                                        ".": {},
+                                        "f:conditions": {},
+                                        "f:instanceId": {},
+                                        "f:instanceState": {},
+                                        "f:metadata": {}
+                                    }
+                                }
+                            },
+                            "manager": "machine-controller-manager",
+                            "operation": "Update",
+                            "time": "2020-11-30T19:39:46Z"
+                        }
+                    ],
+                    "name": "ocp46-4p8gf-master-0",
+                    "namespace": "openshift-machine-api",
+                    "resourceVersion": "13342",
+                    "selfLink": "/apis/machine.openshift.io/v1beta1/namespaces/openshift-machine-api/machines/ocp46-4p8gf-master-0",
+                    "uid": "1ab3f129-7a80-4469-b890-adcfd9a14b08"
+                },
+                "spec": {
+                    "metadata": {},
+                    "providerID": "ovirt://4e14dacd-5890-4802-8567-98423e0ba958",
+                    "providerSpec": {
+                        "value": {
+                            "apiVersion": "ovirtproviderconfig.machine.openshift.io/v1beta1",
+                            "cluster_id": "ccc53763-c479-410f-af0b-ec846929b46f",
+                            "cpu": {
+                                "cores": 4,
+                                "sockets": 1,
+                                "threads": 1
+                            },
+                            "credentialsSecret": {
+                                "name": "ovirt-credentials"
+                            },
+                            "id": "",
+                            "kind": "OvirtMachineProviderSpec",
+                            "memory_mb": 24576,
+                            "metadata": {
+                                "creationTimestamp": null
+                            },
+                            "name": "",
+                            "os_disk": {
+                                "size_gb": 120
+                            },
+                            "template_name": "ocp46-4p8gf-rhcos",
+                            "type": "server",
+                            "userDataSecret": {
+                                "name": "master-user-data"
+                            }
+                        }
+                    }
+                },
+                "status": {
+                    "addresses": [
+                        {
+                            "address": "ocp46-4p8gf-master-0",
+                            "type": "InternalDNS"
+                        },
+                        {
+                            "address": "192.168.11.102",
+                            "type": "InternalIP"
+                        }
+                    ],
+                    "lastUpdated": "2020-11-30T19:39:46Z",
+                    "nodeRef": {
+                        "kind": "Node",
+                        "name": "ocp46-4p8gf-master-0",
+                        "uid": "69e70095-64d3-4101-9da4-3020b75845c6"
+                    },
+                    "phase": "Running",
+                    "providerStatus": {
+                        "conditions": [
+                            {
+                                "lastProbeTime": "2020-11-30T19:39:42Z",
+                                "lastTransitionTime": "2020-11-30T19:39:42Z",
+                                "message": "Machine successfully created",
+                                "reason": "MachineCreateSucceeded",
+                                "status": "True",
+                                "type": "MachineCreated"
+                            }
+                        ],
+                        "instanceId": "4e14dacd-5890-4802-8567-98423e0ba958",
+                        "instanceState": "up",
+                        "metadata": {
+                            "creationTimestamp": null
+                        }
+                    }
+                }
+            },
+            {
+                "apiVersion": "machine.openshift.io/v1beta1",
+                "kind": "Machine",
+                "metadata": {
+                    "annotations": {
+                        "VmId": "ad034c58-2e63-4148-85f3-a991ef910141",
+                        "machine.openshift.io/instance-state": "up"
+                    },
+                    "creationTimestamp": "2020-11-30T19:19:45Z",
+                    "finalizers": [
+                        "machine.machine.openshift.io"
+                    ],
+                    "generation": 2,
+                    "labels": {
+                        "machine.openshift.io/cluster-api-cluster": "ocp46-4p8gf",
+                        "machine.openshift.io/cluster-api-machine-role": "master",
+                        "machine.openshift.io/cluster-api-machine-type": "master"
+                    },
+                    "managedFields": [
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "fieldsType": "FieldsV1",
+                            "fieldsV1": {
+                                "f:metadata": {
+                                    "f:labels": {
+                                        ".": {},
+                                        "f:machine.openshift.io/cluster-api-cluster": {},
+                                        "f:machine.openshift.io/cluster-api-machine-role": {},
+                                        "f:machine.openshift.io/cluster-api-machine-type": {}
+                                    }
+                                },
+                                "f:spec": {
+                                    ".": {},
+                                    "f:metadata": {},
+                                    "f:providerSpec": {
+                                        ".": {},
+                                        "f:value": {
+                                            ".": {},
+                                            "f:apiVersion": {},
+                                            "f:cluster_id": {},
+                                            "f:cpu": {},
+                                            "f:credentialsSecret": {},
+                                            "f:id": {},
+                                            "f:kind": {},
+                                            "f:memory_mb": {},
+                                            "f:metadata": {},
+                                            "f:name": {},
+                                            "f:os_disk": {},
+                                            "f:template_name": {},
+                                            "f:type": {},
+                                            "f:userDataSecret": {}
+                                        }
+                                    }
+                                },
+                                "f:status": {}
+                            },
+                            "manager": "cluster-bootstrap",
+                            "operation": "Update",
+                            "time": "2020-11-30T19:19:45Z"
+                        },
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "fieldsType": "FieldsV1",
+                            "fieldsV1": {
+                                "f:metadata": {
+                                    "f:annotations": {
+                                        ".": {},
+                                        "f:VmId": {},
+                                        "f:machine.openshift.io/instance-state": {}
+                                    },
+                                    "f:finalizers": {
+                                        ".": {},
+                                        "v:\"machine.machine.openshift.io\"": {}
+                                    }
+                                },
+                                "f:spec": {
+                                    "f:providerID": {}
+                                },
+                                "f:status": {
+                                    "f:addresses": {},
+                                    "f:phase": {},
+                                    "f:providerStatus": {
+                                        ".": {},
+                                        "f:conditions": {},
+                                        "f:instanceId": {},
+                                        "f:instanceState": {},
+                                        "f:metadata": {}
+                                    }
+                                }
+                            },
+                            "manager": "machine-controller-manager",
+                            "operation": "Update",
+                            "time": "2020-11-30T19:39:46Z"
+                        },
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "fieldsType": "FieldsV1",
+                            "fieldsV1": {
+                                "f:status": {
+                                    "f:lastUpdated": {},
+                                    "f:nodeRef": {
+                                        ".": {},
+                                        "f:kind": {},
+                                        "f:name": {},
+                                        "f:uid": {}
+                                    }
+                                }
+                            },
+                            "manager": "nodelink-controller",
+                            "operation": "Update",
+                            "time": "2020-11-30T19:39:46Z"
+                        }
+                    ],
+                    "name": "ocp46-4p8gf-master-1",
+                    "namespace": "openshift-machine-api",
+                    "resourceVersion": "13366",
+                    "selfLink": "/apis/machine.openshift.io/v1beta1/namespaces/openshift-machine-api/machines/ocp46-4p8gf-master-1",
+                    "uid": "c90c7239-434b-4ba4-8fe8-5ea31b13e05e"
+                },
+                "spec": {
+                    "metadata": {},
+                    "providerID": "ovirt://ad034c58-2e63-4148-85f3-a991ef910141",
+                    "providerSpec": {
+                        "value": {
+                            "apiVersion": "ovirtproviderconfig.machine.openshift.io/v1beta1",
+                            "cluster_id": "ccc53763-c479-410f-af0b-ec846929b46f",
+                            "cpu": {
+                                "cores": 4,
+                                "sockets": 1,
+                                "threads": 1
+                            },
+                            "credentialsSecret": {
+                                "name": "ovirt-credentials"
+                            },
+                            "id": "",
+                            "kind": "OvirtMachineProviderSpec",
+                            "memory_mb": 24576,
+                            "metadata": {
+                                "creationTimestamp": null
+                            },
+                            "name": "",
+                            "os_disk": {
+                                "size_gb": 120
+                            },
+                            "template_name": "ocp46-4p8gf-rhcos",
+                            "type": "server",
+                            "userDataSecret": {
+                                "name": "master-user-data"
+                            }
+                        }
+                    }
+                },
+                "status": {
+                    "addresses": [
+                        {
+                            "address": "ocp46-4p8gf-master-1",
+                            "type": "InternalDNS"
+                        },
+                        {
+                            "address": "192.168.11.222",
+                            "type": "InternalIP"
+                        }
+                    ],
+                    "lastUpdated": "2020-11-30T19:39:46Z",
+                    "nodeRef": {
+                        "kind": "Node",
+                        "name": "ocp46-4p8gf-master-1",
+                        "uid": "45ef56f6-c436-4bd6-9d11-a5fea3c77b72"
+                    },
+                    "phase": "Running",
+                    "providerStatus": {
+                        "conditions": [
+                            {
+                                "lastProbeTime": "2020-11-30T19:39:43Z",
+                                "lastTransitionTime": "2020-11-30T19:39:43Z",
+                                "message": "Machine successfully created",
+                                "reason": "MachineCreateSucceeded",
+                                "status": "True",
+                                "type": "MachineCreated"
+                            }
+                        ],
+                        "instanceId": "ad034c58-2e63-4148-85f3-a991ef910141",
+                        "instanceState": "up",
+                        "metadata": {
+                            "creationTimestamp": null
+                        }
+                    }
+                }
+            },
+            {
+                "apiVersion": "machine.openshift.io/v1beta1",
+                "kind": "Machine",
+                "metadata": {
+                    "annotations": {
+                        "VmId": "e1721ba2-2f9f-466b-86be-1c4263da0816",
+                        "machine.openshift.io/instance-state": "up"
+                    },
+                    "creationTimestamp": "2020-11-30T19:19:45Z",
+                    "finalizers": [
+                        "machine.machine.openshift.io"
+                    ],
+                    "generation": 2,
+                    "labels": {
+                        "machine.openshift.io/cluster-api-cluster": "ocp46-4p8gf",
+                        "machine.openshift.io/cluster-api-machine-role": "master",
+                        "machine.openshift.io/cluster-api-machine-type": "master"
+                    },
+                    "managedFields": [
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "fieldsType": "FieldsV1",
+                            "fieldsV1": {
+                                "f:metadata": {
+                                    "f:labels": {
+                                        ".": {},
+                                        "f:machine.openshift.io/cluster-api-cluster": {},
+                                        "f:machine.openshift.io/cluster-api-machine-role": {},
+                                        "f:machine.openshift.io/cluster-api-machine-type": {}
+                                    }
+                                },
+                                "f:spec": {
+                                    ".": {},
+                                    "f:metadata": {},
+                                    "f:providerSpec": {
+                                        ".": {},
+                                        "f:value": {
+                                            ".": {},
+                                            "f:apiVersion": {},
+                                            "f:cluster_id": {},
+                                            "f:cpu": {},
+                                            "f:credentialsSecret": {},
+                                            "f:id": {},
+                                            "f:kind": {},
+                                            "f:memory_mb": {},
+                                            "f:metadata": {},
+                                            "f:name": {},
+                                            "f:os_disk": {},
+                                            "f:template_name": {},
+                                            "f:type": {},
+                                            "f:userDataSecret": {}
+                                        }
+                                    }
+                                },
+                                "f:status": {}
+                            },
+                            "manager": "cluster-bootstrap",
+                            "operation": "Update",
+                            "time": "2020-11-30T19:19:45Z"
+                        },
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "fieldsType": "FieldsV1",
+                            "fieldsV1": {
+                                "f:status": {
+                                    "f:nodeRef": {
+                                        ".": {},
+                                        "f:kind": {},
+                                        "f:name": {},
+                                        "f:uid": {}
+                                    }
+                                }
+                            },
+                            "manager": "nodelink-controller",
+                            "operation": "Update",
+                            "time": "2020-11-30T19:39:45Z"
+                        },
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "fieldsType": "FieldsV1",
+                            "fieldsV1": {
+                                "f:metadata": {
+                                    "f:annotations": {
+                                        ".": {},
+                                        "f:VmId": {},
+                                        "f:machine.openshift.io/instance-state": {}
+                                    },
+                                    "f:finalizers": {
+                                        ".": {},
+                                        "v:\"machine.machine.openshift.io\"": {}
+                                    }
+                                },
+                                "f:spec": {
+                                    "f:providerID": {}
+                                },
+                                "f:status": {
+                                    "f:addresses": {},
+                                    "f:lastUpdated": {},
+                                    "f:phase": {},
+                                    "f:providerStatus": {
+                                        ".": {},
+                                        "f:conditions": {},
+                                        "f:instanceId": {},
+                                        "f:instanceState": {},
+                                        "f:metadata": {}
+                                    }
+                                }
+                            },
+                            "manager": "machine-controller-manager",
+                            "operation": "Update",
+                            "time": "2020-11-30T19:39:47Z"
+                        }
+                    ],
+                    "name": "ocp46-4p8gf-master-2",
+                    "namespace": "openshift-machine-api",
+                    "resourceVersion": "13389",
+                    "selfLink": "/apis/machine.openshift.io/v1beta1/namespaces/openshift-machine-api/machines/ocp46-4p8gf-master-2",
+                    "uid": "87fcdd3a-cb07-4f90-93d2-8a4e562aee17"
+                },
+                "spec": {
+                    "metadata": {},
+                    "providerID": "ovirt://e1721ba2-2f9f-466b-86be-1c4263da0816",
+                    "providerSpec": {
+                        "value": {
+                            "apiVersion": "ovirtproviderconfig.machine.openshift.io/v1beta1",
+                            "cluster_id": "ccc53763-c479-410f-af0b-ec846929b46f",
+                            "cpu": {
+                                "cores": 4,
+                                "sockets": 1,
+                                "threads": 1
+                            },
+                            "credentialsSecret": {
+                                "name": "ovirt-credentials"
+                            },
+                            "id": "",
+                            "kind": "OvirtMachineProviderSpec",
+                            "memory_mb": 24576,
+                            "metadata": {
+                                "creationTimestamp": null
+                            },
+                            "name": "",
+                            "os_disk": {
+                                "size_gb": 120
+                            },
+                            "template_name": "ocp46-4p8gf-rhcos",
+                            "type": "server",
+                            "userDataSecret": {
+                                "name": "master-user-data"
+                            }
+                        }
+                    }
+                },
+                "status": {
+                    "addresses": [
+                        {
+                            "address": "ocp46-4p8gf-master-2",
+                            "type": "InternalDNS"
+                        },
+                        {
+                            "address": "192.168.11.226",
+                            "type": "InternalIP"
+                        }
+                    ],
+                    "lastUpdated": "2020-11-30T19:39:47Z",
+                    "nodeRef": {
+                        "kind": "Node",
+                        "name": "ocp46-4p8gf-master-2",
+                        "uid": "855d6bca-77bf-4db2-910a-971e8c839c35"
+                    },
+                    "phase": "Running",
+                    "providerStatus": {
+                        "conditions": [
+                            {
+                                "lastProbeTime": "2020-11-30T19:39:45Z",
+                                "lastTransitionTime": "2020-11-30T19:39:45Z",
+                                "message": "Machine successfully created",
+                                "reason": "MachineCreateSucceeded",
+                                "status": "True",
+                                "type": "MachineCreated"
+                            }
+                        ],
+                        "instanceId": "e1721ba2-2f9f-466b-86be-1c4263da0816",
+                        "instanceState": "up",
+                        "metadata": {
+                            "creationTimestamp": null
+                        }
+                    }
+                }
+            },
+            {
+                "apiVersion": "machine.openshift.io/v1beta1",
+                "kind": "Machine",
+                "metadata": {
+                    "annotations": {
+                        "VmId": "eaf19801-a6a4-42c4-98e3-8182e173e0aa",
+                        "machine.openshift.io/instance-state": "up"
+                    },
+                    "creationTimestamp": "2020-12-01T17:32:28Z",
+                    "finalizers": [
+                        "machine.machine.openshift.io"
+                    ],
+                    "generateName": "ocp46-4p8gf-ocs-0-",
+                    "generation": 2,
+                    "labels": {
+                        "machine.openshift.io/cluster-api-cluster": "ocp46-4p8gf",
+                        "machine.openshift.io/cluster-api-machine-role": "ocs",
+                        "machine.openshift.io/cluster-api-machine-type": "worker",
+                        "machine.openshift.io/cluster-api-machineset": "ocp46-4p8gf-ocs-0"
+                    },
+                    "managedFields": [
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "fieldsType": "FieldsV1",
+                            "fieldsV1": {
+                                "f:metadata": {
+                                    "f:generateName": {},
+                                    "f:labels": {
+                                        ".": {},
+                                        "f:machine.openshift.io/cluster-api-cluster": {},
+                                        "f:machine.openshift.io/cluster-api-machine-role": {},
+                                        "f:machine.openshift.io/cluster-api-machine-type": {},
+                                        "f:machine.openshift.io/cluster-api-machineset": {}
+                                    },
+                                    "f:ownerReferences": {
+                                        ".": {},
+                                        "k:{\"uid\":\"2cb0f419-d2ff-4cd2-aaff-a82f42b3a7fb\"}": {
+                                            ".": {},
+                                            "f:apiVersion": {},
+                                            "f:blockOwnerDeletion": {},
+                                            "f:controller": {},
+                                            "f:kind": {},
+                                            "f:name": {},
+                                            "f:uid": {}
+                                        }
+                                    }
+                                },
+                                "f:spec": {
+                                    ".": {},
+                                    "f:metadata": {},
+                                    "f:providerSpec": {
+                                        ".": {},
+                                        "f:value": {
+                                            ".": {},
+                                            "f:apiVersion": {},
+                                            "f:cluster_id": {},
+                                            "f:cpu": {},
+                                            "f:credentialsSecret": {},
+                                            "f:id": {},
+                                            "f:kind": {},
+                                            "f:memory_mb": {},
+                                            "f:metadata": {},
+                                            "f:name": {},
+                                            "f:os_disk": {},
+                                            "f:template_name": {},
+                                            "f:type": {},
+                                            "f:userDataSecret": {}
+                                        }
+                                    }
+                                }
+                            },
+                            "manager": "machineset-controller",
+                            "operation": "Update",
+                            "time": "2020-12-01T17:32:28Z"
+                        },
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "fieldsType": "FieldsV1",
+                            "fieldsV1": {
+                                "f:metadata": {
+                                    "f:annotations": {
+                                        ".": {},
+                                        "f:VmId": {},
+                                        "f:machine.openshift.io/instance-state": {}
+                                    },
+                                    "f:finalizers": {
+                                        ".": {},
+                                        "v:\"machine.machine.openshift.io\"": {}
+                                    }
+                                },
+                                "f:spec": {
+                                    "f:providerID": {}
+                                },
+                                "f:status": {
+                                    ".": {},
+                                    "f:addresses": {},
+                                    "f:phase": {},
+                                    "f:providerStatus": {
+                                        ".": {},
+                                        "f:conditions": {},
+                                        "f:instanceId": {},
+                                        "f:instanceState": {},
+                                        "f:metadata": {}
+                                    }
+                                }
+                            },
+                            "manager": "machine-controller-manager",
+                            "operation": "Update",
+                            "time": "2020-12-01T17:53:24Z"
+                        },
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "fieldsType": "FieldsV1",
+                            "fieldsV1": {
+                                "f:status": {
+                                    "f:lastUpdated": {},
+                                    "f:nodeRef": {
+                                        ".": {},
+                                        "f:kind": {},
+                                        "f:name": {},
+                                        "f:uid": {}
+                                    }
+                                }
+                            },
+                            "manager": "nodelink-controller",
+                            "operation": "Update",
+                            "time": "2020-12-01T17:57:04Z"
+                        }
+                    ],
+                    "name": "ocp46-4p8gf-ocs-0-2w7wq",
+                    "namespace": "openshift-machine-api",
+                    "ownerReferences": [
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "blockOwnerDeletion": true,
+                            "controller": true,
+                            "kind": "MachineSet",
+                            "name": "ocp46-4p8gf-ocs-0",
+                            "uid": "2cb0f419-d2ff-4cd2-aaff-a82f42b3a7fb"
+                        }
+                    ],
+                    "resourceVersion": "421331",
+                    "selfLink": "/apis/machine.openshift.io/v1beta1/namespaces/openshift-machine-api/machines/ocp46-4p8gf-ocs-0-2w7wq",
+                    "uid": "0263bf37-7d84-45ee-b8d2-f0437a406b13"
+                },
+                "spec": {
+                    "metadata": {},
+                    "providerID": "ovirt://eaf19801-a6a4-42c4-98e3-8182e173e0aa",
+                    "providerSpec": {
+                        "value": {
+                            "apiVersion": "ovirtproviderconfig.machine.openshift.io/v1beta1",
+                            "cluster_id": "ccc53763-c479-410f-af0b-ec846929b46f",
+                            "cpu": {
+                                "cores": 8,
+                                "sockets": 1,
+                                "threads": 1
+                            },
+                            "credentialsSecret": {
+                                "name": "ovirt-credentials"
+                            },
+                            "id": "",
+                            "kind": "OvirtMachineProviderSpec",
+                            "memory_mb": 65536,
+                            "metadata": {
+                                "creationTimestamp": null
+                            },
+                            "name": "",
+                            "os_disk": {
+                                "size_gb": 80
+                            },
+                            "template_name": "ocp46-4p8gf-rhcos",
+                            "type": "server",
+                            "userDataSecret": {
+                                "name": "worker-user-data"
+                            }
+                        }
+                    }
+                },
+                "status": {
+                    "addresses": [
+                        {
+                            "address": "ocp46-4p8gf-ocs-0-2w7wq",
+                            "type": "InternalDNS"
+                        },
+                        {
+                            "address": "192.168.11.238",
+                            "type": "InternalIP"
+                        }
+                    ],
+                    "lastUpdated": "2020-12-01T17:57:04Z",
+                    "nodeRef": {
+                        "kind": "Node",
+                        "name": "ocp46-4p8gf-ocs-0-2w7wq",
+                        "uid": "fbe7f3d5-6d58-4c3c-89cd-704a2bf4a049"
+                    },
+                    "phase": "Running",
+                    "providerStatus": {
+                        "conditions": [
+                            {
+                                "lastProbeTime": "2020-12-01T17:51:01Z",
+                                "lastTransitionTime": "2020-12-01T17:51:01Z",
+                                "message": "Machine successfully created",
+                                "reason": "MachineCreateSucceeded",
+                                "status": "True",
+                                "type": "MachineCreated"
+                            }
+                        ],
+                        "instanceId": "eaf19801-a6a4-42c4-98e3-8182e173e0aa",
+                        "instanceState": "up",
+                        "metadata": {
+                            "creationTimestamp": null
+                        }
+                    }
+                }
+            },
+            {
+                "apiVersion": "machine.openshift.io/v1beta1",
+                "kind": "Machine",
+                "metadata": {
+                    "annotations": {
+                        "VmId": "bfc3c722-bd27-4c50-b268-ff9090e1a62c",
+                        "machine.openshift.io/instance-state": "up"
+                    },
+                    "creationTimestamp": "2020-12-01T17:32:28Z",
+                    "finalizers": [
+                        "machine.machine.openshift.io"
+                    ],
+                    "generateName": "ocp46-4p8gf-ocs-0-",
+                    "generation": 2,
+                    "labels": {
+                        "machine.openshift.io/cluster-api-cluster": "ocp46-4p8gf",
+                        "machine.openshift.io/cluster-api-machine-role": "ocs",
+                        "machine.openshift.io/cluster-api-machine-type": "worker",
+                        "machine.openshift.io/cluster-api-machineset": "ocp46-4p8gf-ocs-0"
+                    },
+                    "managedFields": [
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "fieldsType": "FieldsV1",
+                            "fieldsV1": {
+                                "f:metadata": {
+                                    "f:generateName": {},
+                                    "f:labels": {
+                                        ".": {},
+                                        "f:machine.openshift.io/cluster-api-cluster": {},
+                                        "f:machine.openshift.io/cluster-api-machine-role": {},
+                                        "f:machine.openshift.io/cluster-api-machine-type": {},
+                                        "f:machine.openshift.io/cluster-api-machineset": {}
+                                    },
+                                    "f:ownerReferences": {
+                                        ".": {},
+                                        "k:{\"uid\":\"2cb0f419-d2ff-4cd2-aaff-a82f42b3a7fb\"}": {
+                                            ".": {},
+                                            "f:apiVersion": {},
+                                            "f:blockOwnerDeletion": {},
+                                            "f:controller": {},
+                                            "f:kind": {},
+                                            "f:name": {},
+                                            "f:uid": {}
+                                        }
+                                    }
+                                },
+                                "f:spec": {
+                                    ".": {},
+                                    "f:metadata": {},
+                                    "f:providerSpec": {
+                                        ".": {},
+                                        "f:value": {
+                                            ".": {},
+                                            "f:apiVersion": {},
+                                            "f:cluster_id": {},
+                                            "f:cpu": {},
+                                            "f:credentialsSecret": {},
+                                            "f:id": {},
+                                            "f:kind": {},
+                                            "f:memory_mb": {},
+                                            "f:metadata": {},
+                                            "f:name": {},
+                                            "f:os_disk": {},
+                                            "f:template_name": {},
+                                            "f:type": {},
+                                            "f:userDataSecret": {}
+                                        }
+                                    }
+                                }
+                            },
+                            "manager": "machineset-controller",
+                            "operation": "Update",
+                            "time": "2020-12-01T17:32:28Z"
+                        },
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "fieldsType": "FieldsV1",
+                            "fieldsV1": {
+                                "f:metadata": {
+                                    "f:annotations": {
+                                        ".": {},
+                                        "f:VmId": {},
+                                        "f:machine.openshift.io/instance-state": {}
+                                    },
+                                    "f:finalizers": {
+                                        ".": {},
+                                        "v:\"machine.machine.openshift.io\"": {}
+                                    }
+                                },
+                                "f:spec": {
+                                    "f:providerID": {}
+                                },
+                                "f:status": {
+                                    ".": {},
+                                    "f:addresses": {},
+                                    "f:phase": {},
+                                    "f:providerStatus": {
+                                        ".": {},
+                                        "f:conditions": {},
+                                        "f:instanceId": {},
+                                        "f:instanceState": {},
+                                        "f:metadata": {}
+                                    }
+                                }
+                            },
+                            "manager": "machine-controller-manager",
+                            "operation": "Update",
+                            "time": "2020-12-01T17:45:54Z"
+                        },
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "fieldsType": "FieldsV1",
+                            "fieldsV1": {
+                                "f:status": {
+                                    "f:lastUpdated": {},
+                                    "f:nodeRef": {
+                                        ".": {},
+                                        "f:kind": {},
+                                        "f:name": {},
+                                        "f:uid": {}
+                                    }
+                                }
+                            },
+                            "manager": "nodelink-controller",
+                            "operation": "Update",
+                            "time": "2020-12-01T17:48:34Z"
+                        }
+                    ],
+                    "name": "ocp46-4p8gf-ocs-0-jrxkl",
+                    "namespace": "openshift-machine-api",
+                    "ownerReferences": [
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "blockOwnerDeletion": true,
+                            "controller": true,
+                            "kind": "MachineSet",
+                            "name": "ocp46-4p8gf-ocs-0",
+                            "uid": "2cb0f419-d2ff-4cd2-aaff-a82f42b3a7fb"
+                        }
+                    ],
+                    "resourceVersion": "418237",
+                    "selfLink": "/apis/machine.openshift.io/v1beta1/namespaces/openshift-machine-api/machines/ocp46-4p8gf-ocs-0-jrxkl",
+                    "uid": "cdb340bb-924c-4404-aebc-60754766c442"
+                },
+                "spec": {
+                    "metadata": {},
+                    "providerID": "ovirt://bfc3c722-bd27-4c50-b268-ff9090e1a62c",
+                    "providerSpec": {
+                        "value": {
+                            "apiVersion": "ovirtproviderconfig.machine.openshift.io/v1beta1",
+                            "cluster_id": "ccc53763-c479-410f-af0b-ec846929b46f",
+                            "cpu": {
+                                "cores": 8,
+                                "sockets": 1,
+                                "threads": 1
+                            },
+                            "credentialsSecret": {
+                                "name": "ovirt-credentials"
+                            },
+                            "id": "",
+                            "kind": "OvirtMachineProviderSpec",
+                            "memory_mb": 65536,
+                            "metadata": {
+                                "creationTimestamp": null
+                            },
+                            "name": "",
+                            "os_disk": {
+                                "size_gb": 80
+                            },
+                            "template_name": "ocp46-4p8gf-rhcos",
+                            "type": "server",
+                            "userDataSecret": {
+                                "name": "worker-user-data"
+                            }
+                        }
+                    }
+                },
+                "status": {
+                    "addresses": [
+                        {
+                            "address": "ocp46-4p8gf-ocs-0-jrxkl",
+                            "type": "InternalDNS"
+                        },
+                        {
+                            "address": "192.168.11.236",
+                            "type": "InternalIP"
+                        }
+                    ],
+                    "lastUpdated": "2020-12-01T17:48:34Z",
+                    "nodeRef": {
+                        "kind": "Node",
+                        "name": "ocp46-4p8gf-ocs-0-jrxkl",
+                        "uid": "954b4491-95ff-4017-9b8c-0295971aeb37"
+                    },
+                    "phase": "Running",
+                    "providerStatus": {
+                        "conditions": [
+                            {
+                                "lastProbeTime": "2020-12-01T17:45:31Z",
+                                "lastTransitionTime": "2020-12-01T17:45:31Z",
+                                "message": "Machine successfully created",
+                                "reason": "MachineCreateSucceeded",
+                                "status": "True",
+                                "type": "MachineCreated"
+                            }
+                        ],
+                        "instanceId": "bfc3c722-bd27-4c50-b268-ff9090e1a62c",
+                        "instanceState": "up",
+                        "metadata": {
+                            "creationTimestamp": null
+                        }
+                    }
+                }
+            },
+            {
+                "apiVersion": "machine.openshift.io/v1beta1",
+                "kind": "Machine",
+                "metadata": {
+                    "annotations": {
+                        "VmId": "40c3c229-bd5b-4629-bc03-133d1e52dadf",
+                        "machine.openshift.io/instance-state": "up"
+                    },
+                    "creationTimestamp": "2020-12-01T17:32:28Z",
+                    "finalizers": [
+                        "machine.machine.openshift.io"
+                    ],
+                    "generateName": "ocp46-4p8gf-ocs-0-",
+                    "generation": 2,
+                    "labels": {
+                        "machine.openshift.io/cluster-api-cluster": "ocp46-4p8gf",
+                        "machine.openshift.io/cluster-api-machine-role": "ocs",
+                        "machine.openshift.io/cluster-api-machine-type": "worker",
+                        "machine.openshift.io/cluster-api-machineset": "ocp46-4p8gf-ocs-0"
+                    },
+                    "managedFields": [
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "fieldsType": "FieldsV1",
+                            "fieldsV1": {
+                                "f:metadata": {
+                                    "f:generateName": {},
+                                    "f:labels": {
+                                        ".": {},
+                                        "f:machine.openshift.io/cluster-api-cluster": {},
+                                        "f:machine.openshift.io/cluster-api-machine-role": {},
+                                        "f:machine.openshift.io/cluster-api-machine-type": {},
+                                        "f:machine.openshift.io/cluster-api-machineset": {}
+                                    },
+                                    "f:ownerReferences": {
+                                        ".": {},
+                                        "k:{\"uid\":\"2cb0f419-d2ff-4cd2-aaff-a82f42b3a7fb\"}": {
+                                            ".": {},
+                                            "f:apiVersion": {},
+                                            "f:blockOwnerDeletion": {},
+                                            "f:controller": {},
+                                            "f:kind": {},
+                                            "f:name": {},
+                                            "f:uid": {}
+                                        }
+                                    }
+                                },
+                                "f:spec": {
+                                    ".": {},
+                                    "f:metadata": {},
+                                    "f:providerSpec": {
+                                        ".": {},
+                                        "f:value": {
+                                            ".": {},
+                                            "f:apiVersion": {},
+                                            "f:cluster_id": {},
+                                            "f:cpu": {},
+                                            "f:credentialsSecret": {},
+                                            "f:id": {},
+                                            "f:kind": {},
+                                            "f:memory_mb": {},
+                                            "f:metadata": {},
+                                            "f:name": {},
+                                            "f:os_disk": {},
+                                            "f:template_name": {},
+                                            "f:type": {},
+                                            "f:userDataSecret": {}
+                                        }
+                                    }
+                                }
+                            },
+                            "manager": "machineset-controller",
+                            "operation": "Update",
+                            "time": "2020-12-01T17:32:28Z"
+                        },
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "fieldsType": "FieldsV1",
+                            "fieldsV1": {
+                                "f:metadata": {
+                                    "f:annotations": {
+                                        ".": {},
+                                        "f:VmId": {},
+                                        "f:machine.openshift.io/instance-state": {}
+                                    },
+                                    "f:finalizers": {
+                                        ".": {},
+                                        "v:\"machine.machine.openshift.io\"": {}
+                                    }
+                                },
+                                "f:spec": {
+                                    "f:providerID": {}
+                                },
+                                "f:status": {
+                                    ".": {},
+                                    "f:addresses": {},
+                                    "f:phase": {},
+                                    "f:providerStatus": {
+                                        ".": {},
+                                        "f:conditions": {},
+                                        "f:instanceId": {},
+                                        "f:instanceState": {},
+                                        "f:metadata": {}
+                                    }
+                                }
+                            },
+                            "manager": "machine-controller-manager",
+                            "operation": "Update",
+                            "time": "2020-12-01T17:53:25Z"
+                        },
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "fieldsType": "FieldsV1",
+                            "fieldsV1": {
+                                "f:status": {
+                                    "f:lastUpdated": {},
+                                    "f:nodeRef": {
+                                        ".": {},
+                                        "f:kind": {},
+                                        "f:name": {},
+                                        "f:uid": {}
+                                    }
+                                }
+                            },
+                            "manager": "nodelink-controller",
+                            "operation": "Update",
+                            "time": "2020-12-01T17:57:14Z"
+                        }
+                    ],
+                    "name": "ocp46-4p8gf-ocs-0-r6kzh",
+                    "namespace": "openshift-machine-api",
+                    "ownerReferences": [
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "blockOwnerDeletion": true,
+                            "controller": true,
+                            "kind": "MachineSet",
+                            "name": "ocp46-4p8gf-ocs-0",
+                            "uid": "2cb0f419-d2ff-4cd2-aaff-a82f42b3a7fb"
+                        }
+                    ],
+                    "resourceVersion": "421414",
+                    "selfLink": "/apis/machine.openshift.io/v1beta1/namespaces/openshift-machine-api/machines/ocp46-4p8gf-ocs-0-r6kzh",
+                    "uid": "678266c2-d447-4e5d-bc94-86634d03c7c3"
+                },
+                "spec": {
+                    "metadata": {},
+                    "providerID": "ovirt://40c3c229-bd5b-4629-bc03-133d1e52dadf",
+                    "providerSpec": {
+                        "value": {
+                            "apiVersion": "ovirtproviderconfig.machine.openshift.io/v1beta1",
+                            "cluster_id": "ccc53763-c479-410f-af0b-ec846929b46f",
+                            "cpu": {
+                                "cores": 8,
+                                "sockets": 1,
+                                "threads": 1
+                            },
+                            "credentialsSecret": {
+                                "name": "ovirt-credentials"
+                            },
+                            "id": "",
+                            "kind": "OvirtMachineProviderSpec",
+                            "memory_mb": 65536,
+                            "metadata": {
+                                "creationTimestamp": null
+                            },
+                            "name": "",
+                            "os_disk": {
+                                "size_gb": 80
+                            },
+                            "template_name": "ocp46-4p8gf-rhcos",
+                            "type": "server",
+                            "userDataSecret": {
+                                "name": "worker-user-data"
+                            }
+                        }
+                    }
+                },
+                "status": {
+                    "addresses": [
+                        {
+                            "address": "ocp46-4p8gf-ocs-0-r6kzh",
+                            "type": "InternalDNS"
+                        },
+                        {
+                            "address": "192.168.11.235",
+                            "type": "InternalIP"
+                        }
+                    ],
+                    "lastUpdated": "2020-12-01T17:57:14Z",
+                    "nodeRef": {
+                        "kind": "Node",
+                        "name": "ocp46-4p8gf-ocs-0-r6kzh",
+                        "uid": "914879c8-4e6d-4a25-a94d-ad7b5814d3ed"
+                    },
+                    "phase": "Running",
+                    "providerStatus": {
+                        "conditions": [
+                            {
+                                "lastProbeTime": "2020-12-01T17:51:00Z",
+                                "lastTransitionTime": "2020-12-01T17:51:00Z",
+                                "message": "Machine successfully created",
+                                "reason": "MachineCreateSucceeded",
+                                "status": "True",
+                                "type": "MachineCreated"
+                            }
+                        ],
+                        "instanceId": "40c3c229-bd5b-4629-bc03-133d1e52dadf",
+                        "instanceState": "up",
+                        "metadata": {
+                            "creationTimestamp": null
+                        }
+                    }
+                }
+            },
+            {
+                "apiVersion": "machine.openshift.io/v1beta1",
+                "kind": "Machine",
+                "metadata": {
+                    "annotations": {
+                        "VmId": "f7c5999c-eef1-48dd-af3b-615fa8646da0",
+                        "machine.openshift.io/instance-state": "up"
+                    },
+                    "creationTimestamp": "2020-11-30T19:39:42Z",
+                    "finalizers": [
+                        "machine.machine.openshift.io"
+                    ],
+                    "generateName": "ocp46-4p8gf-worker-0-",
+                    "generation": 2,
+                    "labels": {
+                        "machine.openshift.io/cluster-api-cluster": "ocp46-4p8gf",
+                        "machine.openshift.io/cluster-api-machine-role": "worker",
+                        "machine.openshift.io/cluster-api-machine-type": "worker",
+                        "machine.openshift.io/cluster-api-machineset": "ocp46-4p8gf-worker-0"
+                    },
+                    "managedFields": [
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "fieldsType": "FieldsV1",
+                            "fieldsV1": {
+                                "f:metadata": {
+                                    "f:generateName": {},
+                                    "f:labels": {
+                                        ".": {},
+                                        "f:machine.openshift.io/cluster-api-cluster": {},
+                                        "f:machine.openshift.io/cluster-api-machine-role": {},
+                                        "f:machine.openshift.io/cluster-api-machine-type": {},
+                                        "f:machine.openshift.io/cluster-api-machineset": {}
+                                    },
+                                    "f:ownerReferences": {
+                                        ".": {},
+                                        "k:{\"uid\":\"ad306b3b-fbef-48ad-b716-c079d72bc80e\"}": {
+                                            ".": {},
+                                            "f:apiVersion": {},
+                                            "f:blockOwnerDeletion": {},
+                                            "f:controller": {},
+                                            "f:kind": {},
+                                            "f:name": {},
+                                            "f:uid": {}
+                                        }
+                                    }
+                                },
+                                "f:spec": {
+                                    ".": {},
+                                    "f:metadata": {},
+                                    "f:providerSpec": {
+                                        ".": {},
+                                        "f:value": {
+                                            ".": {},
+                                            "f:apiVersion": {},
+                                            "f:cluster_id": {},
+                                            "f:cpu": {},
+                                            "f:credentialsSecret": {},
+                                            "f:id": {},
+                                            "f:kind": {},
+                                            "f:memory_mb": {},
+                                            "f:metadata": {},
+                                            "f:name": {},
+                                            "f:os_disk": {},
+                                            "f:template_name": {},
+                                            "f:type": {},
+                                            "f:userDataSecret": {}
+                                        }
+                                    }
+                                }
+                            },
+                            "manager": "machineset-controller",
+                            "operation": "Update",
+                            "time": "2020-11-30T19:39:42Z"
+                        },
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "fieldsType": "FieldsV1",
+                            "fieldsV1": {
+                                "f:metadata": {
+                                    "f:annotations": {
+                                        ".": {},
+                                        "f:VmId": {},
+                                        "f:machine.openshift.io/instance-state": {}
+                                    },
+                                    "f:finalizers": {
+                                        ".": {},
+                                        "v:\"machine.machine.openshift.io\"": {}
+                                    }
+                                },
+                                "f:spec": {
+                                    "f:providerID": {}
+                                },
+                                "f:status": {
+                                    ".": {},
+                                    "f:addresses": {},
+                                    "f:phase": {},
+                                    "f:providerStatus": {
+                                        ".": {},
+                                        "f:conditions": {},
+                                        "f:instanceId": {},
+                                        "f:instanceState": {},
+                                        "f:metadata": {}
+                                    }
+                                }
+                            },
+                            "manager": "machine-controller-manager",
+                            "operation": "Update",
+                            "time": "2020-11-30T19:58:14Z"
+                        },
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "fieldsType": "FieldsV1",
+                            "fieldsV1": {
+                                "f:status": {
+                                    "f:lastUpdated": {},
+                                    "f:nodeRef": {
+                                        ".": {},
+                                        "f:kind": {},
+                                        "f:name": {},
+                                        "f:uid": {}
+                                    }
+                                }
+                            },
+                            "manager": "nodelink-controller",
+                            "operation": "Update",
+                            "time": "2020-11-30T20:03:14Z"
+                        }
+                    ],
+                    "name": "ocp46-4p8gf-worker-0-69htz",
+                    "namespace": "openshift-machine-api",
+                    "ownerReferences": [
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "blockOwnerDeletion": true,
+                            "controller": true,
+                            "kind": "MachineSet",
+                            "name": "ocp46-4p8gf-worker-0",
+                            "uid": "ad306b3b-fbef-48ad-b716-c079d72bc80e"
+                        }
+                    ],
+                    "resourceVersion": "29155",
+                    "selfLink": "/apis/machine.openshift.io/v1beta1/namespaces/openshift-machine-api/machines/ocp46-4p8gf-worker-0-69htz",
+                    "uid": "2f76e19c-8156-464b-8104-1db90f6fc21c"
+                },
+                "spec": {
+                    "metadata": {},
+                    "providerID": "ovirt://f7c5999c-eef1-48dd-af3b-615fa8646da0",
+                    "providerSpec": {
+                        "value": {
+                            "apiVersion": "ovirtproviderconfig.machine.openshift.io/v1beta1",
+                            "cluster_id": "ccc53763-c479-410f-af0b-ec846929b46f",
+                            "cpu": {
+                                "cores": 4,
+                                "sockets": 1,
+                                "threads": 1
+                            },
+                            "credentialsSecret": {
+                                "name": "ovirt-credentials"
+                            },
+                            "id": "",
+                            "kind": "OvirtMachineProviderSpec",
+                            "memory_mb": 32768,
+                            "metadata": {
+                                "creationTimestamp": null
+                            },
+                            "name": "",
+                            "os_disk": {
+                                "size_gb": 120
+                            },
+                            "template_name": "ocp46-4p8gf-rhcos",
+                            "type": "server",
+                            "userDataSecret": {
+                                "name": "worker-user-data"
+                            }
+                        }
+                    }
+                },
+                "status": {
+                    "addresses": [
+                        {
+                            "address": "ocp46-4p8gf-worker-0-69htz",
+                            "type": "InternalDNS"
+                        },
+                        {
+                            "address": "192.168.11.224",
+                            "type": "InternalIP"
+                        }
+                    ],
+                    "lastUpdated": "2020-11-30T20:03:14Z",
+                    "nodeRef": {
+                        "kind": "Node",
+                        "name": "ocp46-4p8gf-worker-0-69htz",
+                        "uid": "f05b0c82-39d1-4b64-9a8e-463757bef6ff"
+                    },
+                    "phase": "Running",
+                    "providerStatus": {
+                        "conditions": [
+                            {
+                                "lastProbeTime": "2020-11-30T19:56:06Z",
+                                "lastTransitionTime": "2020-11-30T19:56:06Z",
+                                "message": "Machine successfully created",
+                                "reason": "MachineCreateSucceeded",
+                                "status": "True",
+                                "type": "MachineCreated"
+                            }
+                        ],
+                        "instanceId": "f7c5999c-eef1-48dd-af3b-615fa8646da0",
+                        "instanceState": "up",
+                        "metadata": {
+                            "creationTimestamp": null
+                        }
+                    }
+                }
+            },
+            {
+                "apiVersion": "machine.openshift.io/v1beta1",
+                "kind": "Machine",
+                "metadata": {
+                    "annotations": {
+                        "VmId": "99053eee-7ae4-4412-9d94-b00e253f1c29",
+                        "machine.openshift.io/instance-state": "up"
+                    },
+                    "creationTimestamp": "2020-11-30T19:39:42Z",
+                    "finalizers": [
+                        "machine.machine.openshift.io"
+                    ],
+                    "generateName": "ocp46-4p8gf-worker-0-",
+                    "generation": 2,
+                    "labels": {
+                        "machine.openshift.io/cluster-api-cluster": "ocp46-4p8gf",
+                        "machine.openshift.io/cluster-api-machine-role": "worker",
+                        "machine.openshift.io/cluster-api-machine-type": "worker",
+                        "machine.openshift.io/cluster-api-machineset": "ocp46-4p8gf-worker-0"
+                    },
+                    "managedFields": [
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "fieldsType": "FieldsV1",
+                            "fieldsV1": {
+                                "f:metadata": {
+                                    "f:generateName": {},
+                                    "f:labels": {
+                                        ".": {},
+                                        "f:machine.openshift.io/cluster-api-cluster": {},
+                                        "f:machine.openshift.io/cluster-api-machine-role": {},
+                                        "f:machine.openshift.io/cluster-api-machine-type": {},
+                                        "f:machine.openshift.io/cluster-api-machineset": {}
+                                    },
+                                    "f:ownerReferences": {
+                                        ".": {},
+                                        "k:{\"uid\":\"ad306b3b-fbef-48ad-b716-c079d72bc80e\"}": {
+                                            ".": {},
+                                            "f:apiVersion": {},
+                                            "f:blockOwnerDeletion": {},
+                                            "f:controller": {},
+                                            "f:kind": {},
+                                            "f:name": {},
+                                            "f:uid": {}
+                                        }
+                                    }
+                                },
+                                "f:spec": {
+                                    ".": {},
+                                    "f:metadata": {},
+                                    "f:providerSpec": {
+                                        ".": {},
+                                        "f:value": {
+                                            ".": {},
+                                            "f:apiVersion": {},
+                                            "f:cluster_id": {},
+                                            "f:cpu": {},
+                                            "f:credentialsSecret": {},
+                                            "f:id": {},
+                                            "f:kind": {},
+                                            "f:memory_mb": {},
+                                            "f:metadata": {},
+                                            "f:name": {},
+                                            "f:os_disk": {},
+                                            "f:template_name": {},
+                                            "f:type": {},
+                                            "f:userDataSecret": {}
+                                        }
+                                    }
+                                }
+                            },
+                            "manager": "machineset-controller",
+                            "operation": "Update",
+                            "time": "2020-11-30T19:39:42Z"
+                        },
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "fieldsType": "FieldsV1",
+                            "fieldsV1": {
+                                "f:metadata": {
+                                    "f:annotations": {
+                                        ".": {},
+                                        "f:VmId": {},
+                                        "f:machine.openshift.io/instance-state": {}
+                                    },
+                                    "f:finalizers": {
+                                        ".": {},
+                                        "v:\"machine.machine.openshift.io\"": {}
+                                    }
+                                },
+                                "f:spec": {
+                                    "f:providerID": {}
+                                },
+                                "f:status": {
+                                    ".": {},
+                                    "f:addresses": {},
+                                    "f:phase": {},
+                                    "f:providerStatus": {
+                                        ".": {},
+                                        "f:conditions": {},
+                                        "f:instanceId": {},
+                                        "f:instanceState": {},
+                                        "f:metadata": {}
+                                    }
+                                }
+                            },
+                            "manager": "machine-controller-manager",
+                            "operation": "Update",
+                            "time": "2020-11-30T19:56:52Z"
+                        },
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "fieldsType": "FieldsV1",
+                            "fieldsV1": {
+                                "f:status": {
+                                    "f:lastUpdated": {},
+                                    "f:nodeRef": {
+                                        ".": {},
+                                        "f:kind": {},
+                                        "f:name": {},
+                                        "f:uid": {}
+                                    }
+                                }
+                            },
+                            "manager": "nodelink-controller",
+                            "operation": "Update",
+                            "time": "2020-11-30T20:02:23Z"
+                        }
+                    ],
+                    "name": "ocp46-4p8gf-worker-0-bn79c",
+                    "namespace": "openshift-machine-api",
+                    "ownerReferences": [
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "blockOwnerDeletion": true,
+                            "controller": true,
+                            "kind": "MachineSet",
+                            "name": "ocp46-4p8gf-worker-0",
+                            "uid": "ad306b3b-fbef-48ad-b716-c079d72bc80e"
+                        }
+                    ],
+                    "resourceVersion": "28581",
+                    "selfLink": "/apis/machine.openshift.io/v1beta1/namespaces/openshift-machine-api/machines/ocp46-4p8gf-worker-0-bn79c",
+                    "uid": "00f0e0e5-4ac3-45e3-81ed-ead40a90604f"
+                },
+                "spec": {
+                    "metadata": {},
+                    "providerID": "ovirt://99053eee-7ae4-4412-9d94-b00e253f1c29",
+                    "providerSpec": {
+                        "value": {
+                            "apiVersion": "ovirtproviderconfig.machine.openshift.io/v1beta1",
+                            "cluster_id": "ccc53763-c479-410f-af0b-ec846929b46f",
+                            "cpu": {
+                                "cores": 4,
+                                "sockets": 1,
+                                "threads": 1
+                            },
+                            "credentialsSecret": {
+                                "name": "ovirt-credentials"
+                            },
+                            "id": "",
+                            "kind": "OvirtMachineProviderSpec",
+                            "memory_mb": 32768,
+                            "metadata": {
+                                "creationTimestamp": null
+                            },
+                            "name": "",
+                            "os_disk": {
+                                "size_gb": 120
+                            },
+                            "template_name": "ocp46-4p8gf-rhcos",
+                            "type": "server",
+                            "userDataSecret": {
+                                "name": "worker-user-data"
+                            }
+                        }
+                    }
+                },
+                "status": {
+                    "addresses": [
+                        {
+                            "address": "ocp46-4p8gf-worker-0-bn79c",
+                            "type": "InternalDNS"
+                        },
+                        {
+                            "address": "192.168.11.228",
+                            "type": "InternalIP"
+                        }
+                    ],
+                    "lastUpdated": "2020-11-30T20:02:23Z",
+                    "nodeRef": {
+                        "kind": "Node",
+                        "name": "ocp46-4p8gf-worker-0-bn79c",
+                        "uid": "8257f4c2-584a-454d-8a95-d126d7885dd3"
+                    },
+                    "phase": "Running",
+                    "providerStatus": {
+                        "conditions": [
+                            {
+                                "lastProbeTime": "2020-11-30T19:56:07Z",
+                                "lastTransitionTime": "2020-11-30T19:56:07Z",
+                                "message": "Machine successfully created",
+                                "reason": "MachineCreateSucceeded",
+                                "status": "True",
+                                "type": "MachineCreated"
+                            }
+                        ],
+                        "instanceId": "99053eee-7ae4-4412-9d94-b00e253f1c29",
+                        "instanceState": "up",
+                        "metadata": {
+                            "creationTimestamp": null
+                        }
+                    }
+                }
+            },
+            {
+                "apiVersion": "machine.openshift.io/v1beta1",
+                "kind": "Machine",
+                "metadata": {
+                    "annotations": {
+                        "VmId": "0ee104c0-66a0-40ab-8e92-4c3722f38c82",
+                        "machine.openshift.io/instance-state": "up"
+                    },
+                    "creationTimestamp": "2020-11-30T19:39:42Z",
+                    "finalizers": [
+                        "machine.machine.openshift.io"
+                    ],
+                    "generateName": "ocp46-4p8gf-worker-0-",
+                    "generation": 2,
+                    "labels": {
+                        "machine.openshift.io/cluster-api-cluster": "ocp46-4p8gf",
+                        "machine.openshift.io/cluster-api-machine-role": "worker",
+                        "machine.openshift.io/cluster-api-machine-type": "worker",
+                        "machine.openshift.io/cluster-api-machineset": "ocp46-4p8gf-worker-0"
+                    },
+                    "managedFields": [
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "fieldsType": "FieldsV1",
+                            "fieldsV1": {
+                                "f:metadata": {
+                                    "f:generateName": {},
+                                    "f:labels": {
+                                        ".": {},
+                                        "f:machine.openshift.io/cluster-api-cluster": {},
+                                        "f:machine.openshift.io/cluster-api-machine-role": {},
+                                        "f:machine.openshift.io/cluster-api-machine-type": {},
+                                        "f:machine.openshift.io/cluster-api-machineset": {}
+                                    },
+                                    "f:ownerReferences": {
+                                        ".": {},
+                                        "k:{\"uid\":\"ad306b3b-fbef-48ad-b716-c079d72bc80e\"}": {
+                                            ".": {},
+                                            "f:apiVersion": {},
+                                            "f:blockOwnerDeletion": {},
+                                            "f:controller": {},
+                                            "f:kind": {},
+                                            "f:name": {},
+                                            "f:uid": {}
+                                        }
+                                    }
+                                },
+                                "f:spec": {
+                                    ".": {},
+                                    "f:metadata": {},
+                                    "f:providerSpec": {
+                                        ".": {},
+                                        "f:value": {
+                                            ".": {},
+                                            "f:apiVersion": {},
+                                            "f:cluster_id": {},
+                                            "f:cpu": {},
+                                            "f:credentialsSecret": {},
+                                            "f:id": {},
+                                            "f:kind": {},
+                                            "f:memory_mb": {},
+                                            "f:metadata": {},
+                                            "f:name": {},
+                                            "f:os_disk": {},
+                                            "f:template_name": {},
+                                            "f:type": {},
+                                            "f:userDataSecret": {}
+                                        }
+                                    }
+                                }
+                            },
+                            "manager": "machineset-controller",
+                            "operation": "Update",
+                            "time": "2020-11-30T19:39:42Z"
+                        },
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "fieldsType": "FieldsV1",
+                            "fieldsV1": {
+                                "f:metadata": {
+                                    "f:annotations": {
+                                        ".": {},
+                                        "f:VmId": {},
+                                        "f:machine.openshift.io/instance-state": {}
+                                    },
+                                    "f:finalizers": {
+                                        ".": {},
+                                        "v:\"machine.machine.openshift.io\"": {}
+                                    }
+                                },
+                                "f:spec": {
+                                    "f:providerID": {}
+                                },
+                                "f:status": {
+                                    ".": {},
+                                    "f:addresses": {},
+                                    "f:phase": {},
+                                    "f:providerStatus": {
+                                        ".": {},
+                                        "f:conditions": {},
+                                        "f:instanceId": {},
+                                        "f:instanceState": {},
+                                        "f:metadata": {}
+                                    }
+                                }
+                            },
+                            "manager": "machine-controller-manager",
+                            "operation": "Update",
+                            "time": "2020-11-30T19:57:27Z"
+                        },
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "fieldsType": "FieldsV1",
+                            "fieldsV1": {
+                                "f:status": {
+                                    "f:lastUpdated": {},
+                                    "f:nodeRef": {
+                                        ".": {},
+                                        "f:kind": {},
+                                        "f:name": {},
+                                        "f:uid": {}
+                                    }
+                                }
+                            },
+                            "manager": "nodelink-controller",
+                            "operation": "Update",
+                            "time": "2020-11-30T20:02:38Z"
+                        }
+                    ],
+                    "name": "ocp46-4p8gf-worker-0-g6lc9",
+                    "namespace": "openshift-machine-api",
+                    "ownerReferences": [
+                        {
+                            "apiVersion": "machine.openshift.io/v1beta1",
+                            "blockOwnerDeletion": true,
+                            "controller": true,
+                            "kind": "MachineSet",
+                            "name": "ocp46-4p8gf-worker-0",
+                            "uid": "ad306b3b-fbef-48ad-b716-c079d72bc80e"
+                        }
+                    ],
+                    "resourceVersion": "28827",
+                    "selfLink": "/apis/machine.openshift.io/v1beta1/namespaces/openshift-machine-api/machines/ocp46-4p8gf-worker-0-g6lc9",
+                    "uid": "7eef2bef-f599-4b43-adae-7f4023d375ff"
+                },
+                "spec": {
+                    "metadata": {},
+                    "providerID": "ovirt://0ee104c0-66a0-40ab-8e92-4c3722f38c82",
+                    "providerSpec": {
+                        "value": {
+                            "apiVersion": "ovirtproviderconfig.machine.openshift.io/v1beta1",
+                            "cluster_id": "ccc53763-c479-410f-af0b-ec846929b46f",
+                            "cpu": {
+                                "cores": 4,
+                                "sockets": 1,
+                                "threads": 1
+                            },
+                            "credentialsSecret": {
+                                "name": "ovirt-credentials"
+                            },
+                            "id": "",
+                            "kind": "OvirtMachineProviderSpec",
+                            "memory_mb": 32768,
+                            "metadata": {
+                                "creationTimestamp": null
+                            },
+                            "name": "",
+                            "os_disk": {
+                                "size_gb": 120
+                            },
+                            "template_name": "ocp46-4p8gf-rhcos",
+                            "type": "server",
+                            "userDataSecret": {
+                                "name": "worker-user-data"
+                            }
+                        }
+                    }
+                },
+                "status": {
+                    "addresses": [
+                        {
+                            "address": "ocp46-4p8gf-worker-0-g6lc9",
+                            "type": "InternalDNS"
+                        },
+                        {
+                            "address": "192.168.11.231",
+                            "type": "InternalIP"
+                        }
+                    ],
+                    "lastUpdated": "2020-11-30T20:02:38Z",
+                    "nodeRef": {
+                        "kind": "Node",
+                        "name": "ocp46-4p8gf-worker-0-g6lc9",
+                        "uid": "5c585860-0099-4c19-ad01-c85501bf498f"
+                    },
+                    "phase": "Running",
+                    "providerStatus": {
+                        "conditions": [
+                            {
+                                "lastProbeTime": "2020-11-30T19:56:08Z",
+                                "lastTransitionTime": "2020-11-30T19:56:08Z",
+                                "message": "Machine successfully created",
+                                "reason": "MachineCreateSucceeded",
+                                "status": "True",
+                                "type": "MachineCreated"
+                            }
+                        ],
+                        "instanceId": "0ee104c0-66a0-40ab-8e92-4c3722f38c82",
+                        "instanceState": "up",
+                        "metadata": {
+                            "creationTimestamp": null
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}
+
